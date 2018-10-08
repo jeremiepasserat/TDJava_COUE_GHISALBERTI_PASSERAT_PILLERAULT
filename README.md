@@ -1,1 +1,2 @@
-# TDJava_COU-_GHISALBERTI_PASSERAT_PILLERAULT
+# Git du groupe de projet Java du S5
+  COUÉ Maeliss - GHISALBERTI Kevin - PASSERAT Jérémie et PILLERAULT Alexandre

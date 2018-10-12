@@ -32,17 +32,7 @@ public class Controller{
             });
 
             vue.startStop.setOnAction(event -> {
-                if (vue.startStop.getText() == "Start"){
-                    vue.timer.setCycleCount(Animation.INDEFINITE);
-                    modele.setDuration(1);
-                    vue.timer.play();
-                    vue.startStop("Stop");
-                }
-                else{
-                    vue.timer.stop();
-                    vue.startStop("Start");
-                }
-
+                modele.setIsStart();
             });
 
             vue.ralentir.setOnAction(event -> {

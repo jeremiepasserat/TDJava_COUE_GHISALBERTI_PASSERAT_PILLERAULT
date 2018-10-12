@@ -14,6 +14,8 @@ public class ModeleConcret implements Modele  {
 
     double duration;
 
+    boolean isStart = true;
+
     public void setDuration (double duration){
         this.duration = duration;
     }
@@ -30,6 +32,16 @@ public class ModeleConcret implements Modele  {
     @Override
     public int getVal() {
         return val;
+    }
+
+    @Override
+    public void setIsStart() {
+        isStart = !(isStart);
+    }
+
+    @Override
+    public boolean getIsStart() {
+        return isStart;
     }
 
 

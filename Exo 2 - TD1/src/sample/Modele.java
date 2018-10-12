@@ -5,4 +5,6 @@ public interface Modele {
     double getDuration();
     void setVal(int val);
     int getVal ();
+    void setIsStart();
+    boolean getIsStart();
 }

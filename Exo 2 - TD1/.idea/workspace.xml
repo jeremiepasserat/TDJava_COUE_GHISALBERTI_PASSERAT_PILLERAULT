@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Modele.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Observateur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Sujet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Vue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Implémentation d'un sujet / observateur avec un MVC pour l'exercice 2 du TD1 de conception objet">
+      <change afterPath="$PROJECT_DIR$/src/sample/ModeleConcret.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/ModeleSujet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirTemperature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirTemperatureFahrenheit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirTemperatureKelvin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirTemperatureRankine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirTemperatureReaumur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/ConvertirToCelsius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/Modele.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/Observateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/Sujet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exo 3 - TD1/src/sample/Vue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exo 2 - TD1/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/sample/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Modele.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Modele.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Vue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Vue.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,32 +100,40 @@
     <session id="1474712192">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="dummy" value="7" />
           <entry key="fxml" value="201" />
-          <entry key="java" value="2845" />
+          <entry key="java" value="3312" />
+          <entry key="txt" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2845" />
+          <entry key="JAVA" value="3312" />
+          <entry key="PLAIN_TEXT" value="115" />
           <entry key="XML" value="201" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="JAVA/sample" value="1" />
+          <entry key="java" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="7" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -131,28 +146,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+            <state relative-caret-position="103">
+              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Vue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#721#722#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#1043#1044#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,28 +158,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Modele.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Vue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#198#211#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/ModeleConcret.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#369#370#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/ModeleSujet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -200,7 +235,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/Sujet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -228,11 +263,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Sujet.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Observateur.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Modele.java" />
+        <option value="$PROJECT_DIR$/src/sample/ModeleConcret.java" />
         <option value="$PROJECT_DIR$/src/sample/Vue.java" />
+        <option value="$PROJECT_DIR$/src/sample/ModeleSujet.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
@@ -253,12 +290,10 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,26 +301,33 @@
               <item name="Exo 2 - TD1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exo 2 - TD1" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="Exo 2 - TD1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exo 2 - TD1" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="Exo 2 - TD1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Exo 2 - TD1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
-              <item name="Exo 2 - TD1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exo 2 - TD1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Exo 2 - TD1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Exo 2 - TD1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="Exo 2 - TD1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exo 2 - TD1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="Exo 2 - TD1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Exo 2 - TD1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sample" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,9 +340,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539022134939" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539346360655" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exo 3 - TD1" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -403,18 +445,30 @@
       <workItem from="1538949500015" duration="1052000" />
       <workItem from="1538995760451" duration="597000" />
       <workItem from="1538997382560" duration="596000" />
-      <workItem from="1539008277328" duration="9984000" />
+      <workItem from="1539008277328" duration="10160000" />
+      <workItem from="1539081658084" duration="1600000" />
+      <workItem from="1539089945385" duration="968000" />
+      <workItem from="1539276860200" duration="7000" />
+      <workItem from="1539344879900" duration="1408000" />
     </task>
+    <task id="LOCAL-00001" summary="Implémentation d'un sujet / observateur avec un MVC pour l'exercice 2 du TD1 de conception objet">
+      <created>1539022268024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539022268024</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13531000" />
+    <option name="totallyTimeSpent" value="17690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2806354" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -423,7 +477,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26644737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26644737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -434,7 +488,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32894737" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.40460527" />
+      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.40460527" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -458,19 +512,98 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Implémentation d'un sujet / observateur avec un MVC pour l'exercice 2 du TD1 de conception objet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implémentation d'un sujet / observateur avec un MVC pour l'exercice 2 du TD1 de conception objet" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
+    <entry file="uml://JAVA/sample">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample</OriginalElement>
+          <nodes>
+            <node x="41.000000000000014" y="0.0">sample.Observateur</node>
+            <node x="39.500000000000014" y="81.0">sample.Modele</node>
+            <node x="31.83035714285713" y="324.0">sample.Main</node>
+            <node x="49.5" y="162.0">sample.Vue</node>
+            <node x="149.5" y="81.0">sample.Sujet</node>
+            <node x="84.42261904761905" y="243.0">sample.Controller</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.Modele" target="sample.Observateur">
+              <point x="0.0" y="-15.5" />
+              <point x="-14.625" y="15.5" />
+            </edge>
+            <edge source="sample.Vue" target="sample.Observateur">
+              <point x="0.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="sample.Main" target="sample.Controller">
+              <point x="31.666666666666657" y="-15.5" />
+              <point x="101.4970238095238" y="304.0" />
+              <point x="160.92261904761904" y="304.0" />
+              <point x="25.5" y="15.5" />
+            </edge>
+            <edge source="sample.Controller" target="sample.Modele">
+              <point x="12.75" y="-15.5" />
+              <point x="148.17261904761904" y="218.0" />
+              <point x="154.45535714285714" y="218.0" />
+              <point x="154.45535714285714" y="142.0" />
+              <point x="107.00000000000001" y="142.0" />
+              <point x="22.5" y="15.5" />
+            </edge>
+            <edge source="sample.Sujet" target="sample.Observateur">
+              <point x="0.0" y="-15.5" />
+              <point x="188.0" y="56.0" />
+              <point x="143.375" y="56.0" />
+              <point x="43.875" y="15.5" />
+            </edge>
+            <edge source="sample.Modele" target="sample.Sujet">
+              <point x="-30.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="sample.Main" target="sample.Modele">
+              <point x="-19.0" y="-15.5" />
+              <point x="50.83035714285713" y="294.0" />
+              <point x="39.0" y="294.0" />
+              <point x="39.0" y="142.0" />
+              <point x="62.000000000000014" y="142.0" />
+              <point x="-22.5" y="15.5" />
+            </edge>
+            <edge source="sample.Vue" target="sample.Modele">
+              <point x="-17.499999999999986" y="-15.5" />
+              <point x="67.00000000000001" y="142.0" />
+              <point x="77.00000000000001" y="142.0" />
+              <point x="-7.5" y="15.5" />
+            </edge>
+            <edge source="sample.Main" target="sample.Vue">
+              <point x="-6.333333333333329" y="-15.5" />
+              <point x="63.4970238095238" y="304.0" />
+              <point x="57.375" y="304.0" />
+              <point x="-26.25" y="15.5" />
+            </edge>
+            <edge source="sample.Controller" target="sample.Vue">
+              <point x="-38.25" y="-15.5" />
+              <point x="97.17261904761905" y="218.0" />
+              <point x="93.25" y="218.0" />
+              <point x="8.75" y="15.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8433476394849786" x="95.0" y="319.0" />
+          <SelectedNodes>
+            <node>sample.Sujet</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Observateur.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -482,14 +615,64 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Sujet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Modele.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ModeleConcret.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ModeleSujet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state relative-caret-position="103">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -498,42 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Modele.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#198#211#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Vue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-          </folding>
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

@@ -2,17 +2,14 @@ package sample;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 
-import java.beans.EventHandler;
-
 public class Vue implements Observateur {
 
-    Modele modele;
+    ModeleSujet modeleSujet;
 
     GridPane panneau = new GridPane();
     Label label = new Label("Chronomètre : ");
@@ -29,19 +26,17 @@ public class Vue implements Observateur {
     Button accelerer = new Button("Accelerer");
 
 
-    //
-
     Timeline timer = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-        modele.val++;
-        setChrono(modele.val);
+        modeleSujet.setVal(modeleSujet.getVal()+1);
+        setChrono(modeleSujet.getVal());
     }));
 
 
-    public Vue(Modele modele) {
+    public Vue(ModeleSujet modeleSujet) {
 
-        this.modele = modele;
+        this.modeleSujet = modeleSujet;
 
-        modele.ajoute(this);
+        modeleSujet.ajoute(this);
 
         panneau.add(label, 0, 0);
         panneau.add(chrono, 1, 0);

@@ -1,17 +1,6 @@
 package sample;
 
 import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.util.Duration;
-
-import java.beans.FeatureDescriptor;
-import java.util.ArrayList;
 
 public class Controller{
 
@@ -27,11 +16,6 @@ public class Controller{
             this.vue = vue;
             this.modele = modele;
 
-            vue.timer.setOnFinished(event -> {
-                modele.val ++;
-                vue.setChrono(modele.val);
-            });
-
             /*vue.start.setOnAction(event -> {
                 vue.timer.setCycleCount(Animation.INDEFINITE);
                 vue.timer.play();
@@ -42,7 +26,7 @@ public class Controller{
             vue.reset.setOnAction(event -> {
                 vue.timer.stop();
                 modele.setVal(0);
-                vue.setChrono(modele.val);
+                vue.setChrono(modele.getVal());
                 vue.startStop("Start");
 
             });

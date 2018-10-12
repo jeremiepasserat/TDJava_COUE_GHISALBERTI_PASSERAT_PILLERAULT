@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.control.Button;
@@ -7,9 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 
-public class Vue implements Observateur {
+public class Vue implements Observateur, ObservateurBouton {
 
-    ModeleSujet modeleSujet;
+    Modele modele;
 
     GridPane panneau = new GridPane();
     Label label = new Label("Chronomètre : ");
@@ -27,16 +28,18 @@ public class Vue implements Observateur {
 
 
     Timeline timer = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-        modeleSujet.setVal(modeleSujet.getVal()+1);
-        setChrono(modeleSujet.getVal());
+        modele.setVal(modele.getVal()+1);
+        setChrono(modele.getVal());
     }));
 
 
-    public Vue(ModeleSujet modeleSujet) {
+    public Vue(ModeleSujet modele) {
 
-        this.modeleSujet = modeleSujet;
+        this.modele = modele;
 
-        modeleSujet.ajoute(this);
+        modele.ajoute(this);
+
+        modele.ajouteBouton(this);
 
         panneau.add(label, 0, 0);
         panneau.add(chrono, 1, 0);
@@ -59,6 +62,21 @@ public class Vue implements Observateur {
     @Override
     public void actualise(double duration) {
         timer.setRate(duration);
+    }
+
+    @Override
+    public void actualise (boolean etatBouton) {
+
+        if (!etatBouton){
+            timer.setCycleCount(Animation.INDEFINITE);
+            modele.setDuration(1);
+            timer.play();
+            startStop("Stop");
+        }
+        else{
+            timer.stop();
+            startStop("Start");
+        }
     }
 
 }

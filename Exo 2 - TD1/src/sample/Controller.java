@@ -11,6 +11,8 @@ public class Controller{
 
 
 
+
+
     public Controller (Vue vue, Modele modele){
 
             this.vue = vue;
@@ -23,7 +25,7 @@ public class Controller{
 
             vue.stop.setOnAction(event -> vue.timer.stop());*/
 
-            vue.reset.setOnAction(event -> {
+            vue.contenuVue.reset.setOnAction(event -> {
                 vue.timer.stop();
                 modele.setVal(0);
                 vue.setChrono(modele.getVal());
@@ -31,17 +33,17 @@ public class Controller{
 
             });
 
-            vue.startStop.setOnAction(event -> {
+            vue.contenuVue.startStop.setOnAction(event -> {
                 modele.setIsStart();
             });
 
-            vue.ralentir.setOnAction(event -> {
+            vue.contenuVue.ralentir.setOnAction(event -> {
 
                 modele.setDuration(0.25);
 
             });
 
-        vue.accelerer.setOnAction(event -> {
+        vue.contenuVue.accelerer.setOnAction(event -> {
 
             modele.setDuration(5);
         });

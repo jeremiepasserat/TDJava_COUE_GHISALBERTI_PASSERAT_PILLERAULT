@@ -14,10 +14,10 @@ public class Main extends Application {
         Vue vue = new Vue(modeleSujet);
         Controller controller = new Controller(vue, modeleSujet);
 
-        vue.panneau.setAlignment(Pos.CENTER);
+        vue.contenuVue.panneau.setAlignment(Pos.CENTER);
 
         primaryStage.setTitle("Chronomètre");
-        primaryStage.setScene(new Scene(vue.panneau, 300, 275));
+        primaryStage.setScene(new Scene(vue.contenuVue.panneau, 300, 275));
         primaryStage.show();
     }
 
